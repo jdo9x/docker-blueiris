@@ -10,13 +10,13 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV DISPLAY :0
-ENV BLUEIRIS_VERSION=5
+ENV BLUEIRIS_VERSION=4
 ENV RESOLUTION=1024x768x24
 ENV USRWINE=/usr/share/wine
 
 RUN mkdir -p /usr/share/wine/mono /usr/share/wine/gecko
-ADD http://dl.winehq.org/wine/wine-gecko/2.47.1/wine-gecko-2.47.1-x86_64.msi $USRWINE/gecko
-ADD http://dl.winehq.org/wine/wine-gecko/2.47.1/wine-gecko-2.47.1-x86.msi $USRWINE/gecko
+ADD http://dl.winehq.org/wine/wine-gecko/2.47.3/wine-gecko-2.47.3-x86_64.msi $USRWINE/gecko
+ADD http://dl.winehq.org/wine/wine-gecko/2.47.3/wine-gecko-2.47.3-x86.msi $USRWINE/gecko
 ADD https://dl.winehq.org/wine/wine-mono/5.1.0/wine-mono-5.1.0-x86.msi $USRWINE/mono
 
 RUN apt-get update && \
